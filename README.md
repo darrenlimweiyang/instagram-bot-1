@@ -11,4 +11,9 @@ This project started when I was interested in scrapping Instagram information fo
 
 As I progressed, I became curious in seeing how much I could automate with my bot. 
 Implemented features are as follows:
-1. 
+1. Auto Login given a set of credentials
+2. Following a user given one's username
+3. Getting a list of one's followers
+4. Liking every single photo of one's profile
+
+

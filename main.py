@@ -3,6 +3,8 @@ import time
 from selenium.webdriver.common.keys import Keys
 import sys
 
+import login
+
 
 class InstagramBot():
 
@@ -113,7 +115,6 @@ class InstagramBot():
 
 		'''Checks number of followers already loaded in modal. If < input number, action chain and scrolls down
 		Increases the number of followers loaded.'''
-		followersList.click() # clicks modal to be inside
 		actionChain = webdriver.ActionChains(self.browser)
 		while(numberOfFollowersInList < max):
 			actionChain.key_down(Keys.SPACE).key_up(Keys.SPACE).perform()
@@ -171,12 +172,14 @@ section > main > div > div._2z6nI > article > div:nth-child(1) > div > div:nth-c
 
 
 
-bot = InstagramBot('hunter19pp', 'qwerty1122')
+bot = InstagramBot(login.username, login.password)
+# For security purposes, username and password are not shown. 
+# Please use your own account, or create one easily. 
 bot.sign_in()
 bot.click_no()
-bot.like_all_photos("nus_usp")
+#bot.like_all_photos("nus_usp")
 #bot.follow_with_user("karthiii96")
-#to_follow = bot.getUserFollowers("therock",25)
+to_follow = bot.getUserFollowers("therock",25)
 #bot.follow_list(to_follow)
 #time.sleep(3)
 #bot.closeBrowser()

@@ -16,4 +16,9 @@ Implemented features are as follows:
 3. Getting a list of one's followers
 4. Liking every single photo of one's profile
 
+## Feature List
+
+- [ ] Feature one
+- [x] Feature two
+
 
